@@ -20,7 +20,7 @@ pipeline {
             steps {                
                 sh 'mvn --version'
                 sh 'mvn clean install package'
-            }
+            } 
         }
         stage ('Deploy') {
             steps { 
