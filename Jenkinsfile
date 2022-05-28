@@ -11,8 +11,8 @@ pipeline {
                 sh 'echo "Run some lines"'
                 }
         }
-        steps {
-            stage ('Test') {
+        stage ('Test') {
+            steps {
                 sh 'echo "some tests"'
             }
         }
