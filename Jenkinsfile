@@ -1,9 +1,9 @@
 pipeline {
-    agent any
-    tools {
-        maven "MAVEN"
+    agent {
+        image "maven:3.6.0-jdk-13"
+        label "docker"
     }
-    
+        
     
     stages {
         stage ('Code analyse') {
@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {                
                 sh 'mvn --version'
-                sh 'mvn clean install package'
+                sh 'mvn clean package'
             } 
         }        
     }
