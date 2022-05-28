@@ -7,10 +7,14 @@ pipeline {
     
     stages {
         stage ('Code analyse') {
-            sh 'echo "Run some lines"'
+            steps {
+                sh 'echo "Run some lines"'
+                }
         }
-        stage ('Test') {
-            sh 'echo "some tests"'
+        steps {
+            stage ('Test') {
+                sh 'echo "some tests"'
+            }
         }
         stage('Build') {
             steps {                
